@@ -10,8 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Taqwa">
         <activity
+            android:name=".Doa"
+            android:exported="false"
+            android:label="Doa &amp; Dzikir"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".BacaanSholat"
+            android:exported="false"
+            android:label="Bacaan Sholat"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".NiatSholat"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Bacaan Niat Sholat Wajib"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
