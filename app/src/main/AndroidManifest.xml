@@ -10,15 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Taqwa">
         <activity
+            android:name=".AyatKursi"
+            android:exported="false" />
+        <activity
+            android:name=".Dzikir"
+            android:exported="false" />
+        <activity
             android:name=".Doa"
             android:exported="false"
             android:label="Doa &amp; Dzikir"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".BacaanSholat"
             android:exported="false"
             android:label="Bacaan Sholat"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".NiatSholat"
             android:exported="false"

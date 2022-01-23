@@ -8,18 +8,18 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/imgHero"
         android:layout_width="wrap_content"
         android:layout_height="250dp"
         android:src="@drawable/tema"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <ScrollView
+        android:id="@+id/scView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_gravity="center_vertical"
         android:gravity="center_horizontal"
         android:orientation="vertical"
@@ -27,127 +27,218 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.854">
+        app:layout_constraintTop_toBottomOf="@+id/imgHero"
+        app:layout_constraintVertical_bias="1.0">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardSholatWajib"
-            android:layout_width="320dp"
-            android:layout_height="74dp"
-            android:layout_marginTop="14dp"
-            android:layout_marginBottom="14dp"
-            android:backgroundTint="#37B899"
-            android:clickable="true"
-            android:padding="14dp"
-            app:cardElevation="8dp">
+        <RelativeLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="75dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSholatWajib"
+                android:layout_width="320dp"
+                android:layout_height="74dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
 
-                <TextView
-                    android:id="@+id/titleNiatSholat"
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Niat Sholat Wajib"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:layout_margin="12dp">
 
-                <TextView
+                    <TextView
+                        android:id="@+id/titleNiatSholat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Niat Sholat Wajib"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleNiatSholat"
+                        android:text="Bacaan niat sholat wajib 5 waktu"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/praying" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBacaanSholat"
+                android:layout_width="320dp"
+                android:layout_height="74dp"
+                android:layout_below="@id/cardSholatWajib"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/titleNiatSholat"
-                    android:text="Bacaan niat sholat wajib 5 waktu"
-                    android:textColor="@color/white" />
+                    android:layout_margin="12dp">
 
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/praying" />
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/titleBacaanSholat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bacaan Sholat"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
 
-        </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleBacaanSholat"
+                        android:text="Bacaan sholat wajib 5 waktu"
+                        android:textColor="@color/white" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardBacaanSholat"
-            android:layout_width="320dp"
-            android:layout_height="74dp"
-            android:layout_marginBottom="14dp"
-            android:backgroundTint="#37B899"
-            android:clickable="true"
-            android:padding="14dp"
-            app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/doa" />
+                </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp">
+            </com.google.android.material.card.MaterialCardView>
 
-                <TextView
-                    android:id="@+id/titleBacaanSholat"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDoa"
+                android:layout_width="320dp"
+                android:layout_height="74dp"
+                android:layout_below="@id/cardBacaanSholat"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bacaan Sholat"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:layout_margin="12dp">
 
-                <TextView
+                    <TextView
+                        android:id="@+id/titleDoa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Doa"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoa"
+                        android:text="Doa dan dzikir setelah sholat"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/quran" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDzikir"
+                android:layout_width="320dp"
+                android:layout_height="74dp"
+                android:layout_below="@id/cardDoa"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/titleBacaanSholat"
-                    android:text="Bacaan sholat wajib 5 waktu"
-                    android:textColor="@color/white" />
+                    android:layout_margin="12dp">
 
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/doa" />
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/titleDzikir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dzikir"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
 
-        </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDzikir"
+                        android:text="Doa dan dzikir setelah sholat"
+                        android:textColor="@color/white" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardDoa"
-            android:layout_width="320dp"
-            android:layout_height="74dp"
-            android:layout_marginBottom="14dp"
-            android:backgroundTint="#37B899"
-            android:clickable="true"
-            android:padding="14dp"
-            app:cardElevation="8dp">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/quran" />
+                </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp">
+            </com.google.android.material.card.MaterialCardView>
 
-                <TextView
-                    android:id="@+id/titleDoa"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAyatKursi"
+                android:layout_width="320dp"
+                android:layout_height="74dp"
+                android:layout_below="@id/cardDzikir"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Doa"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:layout_margin="12dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/titleDoa"
-                    android:text="Doa dan dzikir setelah sholat"
-                    android:textColor="@color/white" />
+                    <TextView
+                        android:id="@+id/titleAyatKursi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ayat Kursi"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
 
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/quran" />
-            </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleAyatKursi"
+                        android:text="Doa dan dzikir setelah sholat"
+                        android:textColor="@color/white" />
 
-        </com.google.android.material.card.MaterialCardView>
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/quran" />
+                </RelativeLayout>
 
-    </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
