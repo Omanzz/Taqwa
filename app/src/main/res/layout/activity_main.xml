@@ -146,7 +146,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/titleDoa"
-                        android:text="Doa dan dzikir setelah sholat"
+                        android:text="Kumpulan doa-doa"
                         android:textColor="@color/white" />
 
                     <ImageView
@@ -186,7 +186,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/titleDzikir"
-                        android:text="Doa dan dzikir setelah sholat"
+                        android:text="Dzikir setelah sholat"
                         android:textColor="@color/white" />
 
                     <ImageView
@@ -226,7 +226,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/titleAyatKursi"
-                        android:text="Doa dan dzikir setelah sholat"
+                        android:text="Ayat kursi dan tafsir"
                         android:textColor="@color/white" />
 
                     <ImageView
