@@ -106,7 +106,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/titleBacaanSholat"
-                        android:text="Bacaan sholat wajib 5 waktu"
+                        android:text="Bacaan sholat wajib sesuai urutan"
                         android:textColor="@color/white" />
 
                     <ImageView
