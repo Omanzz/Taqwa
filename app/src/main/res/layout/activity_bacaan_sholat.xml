@@ -1,10 +1,544 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1E8668"
-    tools:context=".BacaanSholat">
+    tools:context=".BacaanSholat"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNiat"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleNiat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1. Awali dengan Niat"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardIftitah"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_below="@id/cardNiat"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDoa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2. Iftitah"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoa"
+                        android:textColor="@color/white"
+                        android:text="Awali dengan mengucap 'Allahu Akbar' lalu dilanjutkan dengan bacaan iftitah :" />
+
+                    <TextView
+                        android:id="@+id/txtArab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt"
+                        android:textColor="@color/white"
+                        android:text="كَبِيرًا، وَالْحَمْدُ لِلَّهِ كَثِيرًا، وَسُبْحَانَ اللهِ بُكْرَةً وَأَصِيلًا
+وَجَّهْتُ وَجْهِيَ لِلَّذِيْ فَطَرَ السَّمَوَاتِ وَالْأَرْضَ حَنِيْفاً مُسْلِماً وَمَا أَنَا مِنَ الْمُشْرِكِيْنَ. إِنَّ صَلَاتِيْ وَنُسُكِيْ وَمَحْيَايَ وَمَمَاتِيْ لِلَّهِ رَبِّ الْعَالَمِيْنَ لَا شَرِيْكَ لَهُ وَبِذَلِكَ أُمِرْتُ وَأَنَا مِنَ الْمُسْلِمِيْن                                       "
+                        />
+
+                    <TextView
+                        android:id="@+id/txtLatin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtArab"
+                        android:textColor="@color/white"
+                        android:textStyle="italic"
+                        android:text="Kabiiraw walhamdu lillaahi katsiira wa subhaanallaahi bukrataw wa'ashiila.\nWajjahtu wajhiya lilladzii fataras samawaati wal ardha haniifam muslimaw wamaa anaa minal musyrikiin. Inna shalaatii wa nusukii wa mahyaaya wa mamaatii lillaahi rabbil aalamiin. Laa syariikalahu wa bidzaalika umirtu wa anaa minal muslimiin."
+                        />
+
+                    <TextView
+                        android:id="@+id/txtArti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtLatin"
+                        android:text="Allah maha besar, maha sempurna kebesaran-Nya. Segala puji bagi Allah, pujian yang sebanyak-banyaknya. Dan maha suci Allah sepanjang pagi dan petang.\nKuhadapkan wajahku kepada zat yang telah menciptakan langit dan bumi dengan penuh ketulusan dan kepasrahan dan aku bukanlah termasuk orang-orang yang musyrik. Sesungguhnya sholatku, ibadahku, hidupku dan matiku semuanya untuk Allah, penguasa alam semesta. Tidak ada sekutu bagi-Nya dan dengan demikianlah aku diperintahkan dan aku termasuk orang-orang yang muslim."
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAlFatihah"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_below="@id/cardIftitah"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleAlFatihah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3. Surat Al-Fatihah"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtArab3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleAlFatihah"
+                        android:textColor="@color/white"
+                        android:text="بِسْمِ اللّهِ الرَّحْمَنِ الرَّحِيْمِ . الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ . الرَّحْمَٰنِ الرَّحِيم . مَالِكِ يَوْمِ الدِّينِ . إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ . اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ . صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtLatin3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtArab3"
+                        android:textColor="@color/white"
+                        android:textStyle="italic"
+                        android:text="Bismillahir rahmaa nirrahiim. Alhamdu lilla hi rabbil 'alamin. Ar rahmaanirrahiim. Maaliki yaumiddiin. Iyyaaka na'budu wa iyyaaka nasta'iin. Ihdinash shirraatal musthaqiim. Shiraathal ladziina an'amta 'alaihim ghairil maghduubi 'alaihim waladh-dhaalliin."
+                        />
+
+                    <TextView
+                        android:id="@+id/txtArti3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtLatin3"
+                        android:text="Dengan nama Allah yang maha pengasih, maha penyayang. Segala puji bagi Allah, tuhan seluruh alam, yang maha pengasih, maha penyayang, pemilik hari pembalasan. Hanya kepada engkaulah kami menyembah dan hanya kepada engkaulah kami mohon pertolongan. Tunjukilah kami jalan yang lurus (yaitu) jalan orang-orang yang telah engkau beri nikmat kepadanya, bukan (jalan) mereka yang dimurkai, dan bukan (pula jalan) mereka yang sesat.\n\nKemudian dilanjutkan dengan membaca surat pendek"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardRukuk"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_below="@id/cardAlFatihah"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDoa4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4. Rukuk"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtArab4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoa4"
+                        android:textColor="@color/white"
+                        android:text="سبحان ربي العظيم وبحمده"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtLatin4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtArab4"
+                        android:textColor="@color/white"
+                        android:textStyle="italic"
+                        android:text="'Subhaana robbiyal adziimi wabihamdih' Sebanyak 3 Kali"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtArti4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtLatin4"
+                        android:text="Maha suci tuhan yang maha agung serta memujilah aku kepadanya."
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardIktidal"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_below="@id/cardRukuk"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDoa5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5. Iktidal"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtArab5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoa5"
+                        android:textColor="@color/white"
+                        android:text="سمع الله لمن حمده ربنا لك اللحمد ملء السموات وملء الأرض وملء ما شئت من شيء بعد"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtLatin5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtArab5"
+                        android:textColor="@color/white"
+                        android:textStyle="italic"
+                        android:text="Sami'allaahu liman hamidah Robbanaa lakal hamdu mil us samawaati wamil ul ardhi wamil u maa syi'ta min syain ba'du."
+                        />
+
+                    <TextView
+                        android:id="@+id/txtArti5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtLatin5"
+                        android:text="Allah maha mendengar terhadap orang yang memujinya. Ya Allah tuhan kami, bagimu segala puji sepenuh langit dan bumi, dan sepenuh sesuatu yang engkau kehendaki sesudah itu."
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSujud"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_below="@id/cardIktidal"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDoa6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6. Sujud"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtArab6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoa6"
+                        android:textColor="@color/white"
+                        android:text="سبحان ربي الأعلى وبحمده"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtLatin6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtArab6"
+                        android:textColor="@color/white"
+                        android:textStyle="italic"
+                        android:text="'Subhaana robbiyal a'la wabihamdih' Sebanyak 3 Kali"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtArti6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtLatin6"
+                        android:text="Maha suci tuhan yang maha tinggi serta memujilah aku kepadanya."
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDuduk2Sujud"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_below="@id/cardSujud"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDoa7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7. Duduk diantara 2 Sujud"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtArab7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoa7"
+                        android:textColor="@color/white"
+                        android:text="رب اغفررلي وارحمني واجبرني وارفعني وارزقني واههدني وعافني واعف عني"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtLatin7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtArab7"
+                        android:textColor="@color/white"
+                        android:textStyle="italic"
+                        android:text="Robbighfirlii warhamnii wajburnii warfa'nii warzuqnii wahdinii wa'aafinii wa'fu 'annii."
+                        />
+
+                    <TextView
+                        android:id="@+id/txtArti7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtLatin7"
+                        android:text="Ya Allah ampunilah dosaku, belas kasihanilah aku, cukupkanlah segala kekurangan dan angkatlah derajatku, berilah rizki kepadaku, berilah aku petunjuk, berilah kesehatan kepadaku dan berilah ampunan kepadaku."
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardTasyahudAwal"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_below="@id/cardDuduk2Sujud"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDoa8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8. Tasyahud Awal"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtArab8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoa8"
+                        android:textColor="@color/white"
+                        android:text="التَّحِيَّاتُ الْمُبَارَكَاتُ الصَّلَوَاتُ الطَّيِّبَاتُ لِلَّهِ السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِىُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِاَ . للَّهُمَّ صَلِّ عَلىَ مُحَمَّدٍ"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtLatin8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtArab8"
+                        android:textColor="@color/white"
+                        android:textStyle="italic"
+                        android:text="Attahiyyaatul mubaarokaatush sholawaatuth thoyyibaatu lillaah. Assalaamu 'alaika ayyuhan nabiyyu wa rohmatullahi wa barokaatuh. Assalaaamu'alainaa wa 'alaa 'ibaadillaahish shoolihiin. Asyhadu allaa ilaaha illallah wa asyhadu anna Muhammadar rosuulullah. Allahumma sholli 'alaa Muhammad."
+                        />
+
+                    <TextView
+                        android:id="@+id/txtArti8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtLatin8"
+                        android:text="Segala penghormatan, keberkahan, salawat dan kebaikan hanya bagi Allah. Semoga salam sejahtera selalu tercurahkan kepadamu wahai nabi, demikian pula rahmat Allah dan berkah-Nya dan semoga salam sejahtera selalu tercurah kepada kami dan hamba-hamba Allah yang saleh. Aku bersaksi bahwa tiada tuhan kecuali Allah dan aku bersaksi bahwa Muhammad adalah utusan Allah. Ya Allah, berilah rahmat kepada Nabi Muhammad."
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardTasyahudAkhir"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_below="@id/cardTasyahudAwal"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDoa9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9. Tasyahud Akhir"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtArab9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoa9"
+                        android:textColor="@color/white"
+                        android:text="اَللَّهُمَّ صَلِّ عَلىَ مُحَمَّدٍ وَعَلىَ آلِ مُحَمَّدٍ كَماَ صَلَّيْتَ عَلىَ إِبْرَاهِيْمَ وَعَلىَ آلِ إِبْرَاهِيْمَ إِنـَّكَ حَمِيْدٌ مَجِيْدٌ اَللَّهُمَّ باَرِكْ عَلىَ مُحَمَّدٍ وَعَلىَ آلِ مُحَمَّدٍ كَماَ باَرَكْتَ عَلىَ إِبْرَاهِيْمَ وَعَلىَ آلِ إِبْرَاهِيْمَ إِنـَّكَ حَمِيْدٌ مَجِيْدٌ"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtLatin9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtArab9"
+                        android:textColor="@color/white"
+                        android:textStyle="italic"
+                        android:text="Allahumma sholli 'alaa Muhammad wa 'alaa aali Muhammad kamaa shollaita 'alaa Ibroohim wa 'alaa aali Ibroohimm innaka hamiidum majiid. Alloohumma baarik 'alaa Muhammad wa 'alaa aali Muhammad kamaa baarokta 'alaa Ibroohim wa 'alaa aali Ibroohimm innaka hamiidum majiid."
+                        />
+
+                    <TextView
+                        android:id="@+id/txtArti9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtLatin9"
+                        android:text="Ya Allah, berilah rahmat kepada Nabi Muhammad dan keluarga Nabi Muhammad sebagaimana engkau telah memberikan rahmat kepada Nabi Ibrahim dan keluarga Nabi Ibrahim. Sesungguhnya engkau maha terpuji lagi maha mulia. Ya Allah, berilah keberkahan kepada Nabi Muhammad dan keluarga Nabi Muhammad sebagaimana engkau telah memberikan keberkahan kepada Nabi Ibrahim dan keluarga Nabi Ibrahim. Sesungguhnya engkau maha terpuji lagi maha mulia."
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSalam"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_below="@id/cardTasyahudAkhir"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="24dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDoa10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10. Salam"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtArab10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoa10"
+                        android:textColor="@color/white"
+                        android:text="ٌالسَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtLatin10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtArab10"
+                        android:textColor="@color/white"
+                        android:textStyle="italic"
+                        android:text="Assalaamu alaikum wa rahmatullah"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtArti10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtLatin10"
+                        android:text="Semoga keselamatan dan rahmat Allah dilimpahkan kepadamu."
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
