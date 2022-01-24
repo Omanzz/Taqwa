@@ -1,10 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1E8668"
+    android:orientation="vertical"
     tools:context=".Dzikir">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDzikir"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDzikir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dzikir Setelah Sholat"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/latinDzikir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDzikir"
+                        android:text="@string/dzikir"
+                        android:textColor="@color/white"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

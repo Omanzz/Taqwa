@@ -11,14 +11,16 @@
         android:theme="@style/Theme.Taqwa">
         <activity
             android:name=".AyatKursi"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".Dzikir"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Doa"
             android:exported="false"
-            android:label="Doa &amp; Dzikir"
+            android:label="Doa - Doa"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".BacaanSholat"

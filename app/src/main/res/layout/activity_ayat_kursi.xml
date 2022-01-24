@@ -1,10 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1E8668"
+    android:orientation="vertical"
     tools:context=".AyatKursi">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAyatKursi"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDoa4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ayat Kursi\n"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtArab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoa4"
+                        android:textColor="@color/white"
+                        android:text="ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtLatin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtArab"
+                        android:textColor="@color/white"
+                        android:textStyle="italic"
+                        android:text="Allohu laa ilaaha illaa Huwal Hayyul Qoyyuum, laa ta’khudzuhuu sinatuw walaa nauum, la Huu maa fis samawaati wa maa fil ardh, mann dzalladzii yasyfa’u ‘inda Huu, illa bi idznih, ya’lamu maa bayna aidiihim wa maa kholfahum, wa laa yuhiituuna bisyayim min ‘ilmi Hii illaa bi maa syaa’, wa si’a kursiyyuus samaawaati walardh, wa laa yauudlu Huu hifdzuhumaa, wa Huwal ‘aliyyul ‘adziiim\n"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtArti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtLatin"
+                        android:text="Allah, tidak ada Tuhan (yang berhak disembah) melainkan Dia Yang Hidup kekal lagi terus menerus mengurus (makhluk-Nya); tidak mengantuk dan tidak tidur. Kepunyaan-Nya apa yang di langit dan di bumi. Tiada yang dapat memberi syafa'at di sisi Allah tanpa izin-Nya? Allah mengetahui apa-apa yang di hadapan mereka dan di belakang mereka, dan mereka tidak mengetahui apa-apa dari ilmu Allah melainkan apa yang dikehendaki-Nya. Kursi Allah meliputi langit dan bumi. Dan Allah tidak merasa berat memelihara keduanya, dan Allah Maha Tinggi lagi Maha Besar.” (QS. Al Baqoroh: 255)"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -226,7 +226,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/titleAyatKursi"
-                        android:text="Ayat kursi dan tafsir"
+                        android:text="Ayat kursi dan terjemahannya"
                         android:textColor="@color/white" />
 
                     <ImageView
