@@ -1,10 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1E8668"
+    android:orientation="vertical"
     tools:context=".Doa">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSapuJagad"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleSapuJagad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Doa Sapu Jagad"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/arabSapuJagad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleSapuJagad"
+                        android:text="رَبَّنَا آَتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآَخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ"
+                        android:textColor="@color/white"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/latinDzikir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/arabSapuJagad"
+                        android:text="Rabbanaa aatinaa fid dunyaa hasanah, wa fil aakhirati hasanah, wa qinaa ‘dzaaban naarِ"
+                        android:textColor="@color/white"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDoaDhuha"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardSapuJagad"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDoaDhuha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Doa Sholat Dhuha"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/arabDoaDhuha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoaDhuha"
+                        android:text="ِاَللّٰهُمَّ اِنَّ الضُّحَآءَ ضُحَاءُكَ وَالْبَهَاءَ بَهَاءُكَ وَالْجَمَالَ جَمَالُكَ وَالْقُوَّةَ قُوَّتُكَ وَالْقُدْرَةَ قُدْرَتُكَ وَالْعِصْمَةَ عِصْمَتُكَ اَللّٰهُمَّ اِنْ كَانَ رِزْقِى فِى السَّمَآءِ فَأَنْزِلْهُ وَاِنْ كَانَ فِى اْلاَرْضِ فَأَخْرِجْهُ وَاِنْ كَانَ مُعَسَّرًا فَيَسِّرْهُ وَاِنْ كَانَ حَرَامًا فَطَهِّرْهُ وَاِنْ كَانَ بَعِيْدًا فَقَرِّبْهُ بِحَقِّ ضُحَاءِكَ وَبَهَاءِكَ وَجَمَالِكَ وَقُوَّتِكَ وَقُدْرَتِكَ آتِنِىْ مَآاَتَيْتَ عِبَادَكَ الصَّالِحِيْنَ"
+                        android:textColor="@color/white"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/latinDoaDhuha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/arabDoaDhuha"
+                        android:text="Allaahumma innadh dhuhaa-a dhuhaa-uka walbahaa-a bahaa-uka wal jamaala jamaaluka wal quwwata quw watuka wal qudrata qudratuka wal 'ishmatta 'ishmatuk. Allaahumma in kaana rizqii fissamaa-i fa anzilhu wa in kaanafil ardhi fa-akhrijhu wa in kaana mu'assaran fayas sirhu wa in kaana haraaman fathahhirhu wa in kaana ba'iidan faqarribhu bihaqqi dhuhaa-ika wa bahaa-ika wa jamaalika wa quuwatika wa qudratika aatinii maa aataita 'ibaadakash shalihiin.ِ"
+                        android:textColor="@color/white"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDoaQunut"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardDoaDhuha"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDoaQunut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Doa Qunut"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/arabDoaQunut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoaQunut"
+                        android:text="اَللّهُمَّ اهْدِنِىْ فِيْمَنْ هَدَيْتَ وَعَافِنِى فِيْمَنْ عَافَيْتَ وَتَوَلَّنِىْ فِيْمَنْ تَوَلَّيْتَ وَبَارِكْ لِىْ فِيْمَا اَعْطَيْتَ وَقِنِيْ شَرَّ مَاقَضَيْتَ، فَاِنَّكَ تَقْضِىْ وَلاَ يُقْضَى عَلَيْكَ وَاِنَّهُ لاَ يَذِلُّ مَنْ وَالَيْتَ وَلاَ يَعِزُّ مَنْ عَادَيْتَ تَبَارَكْتَ رَبَّنَا وَتَعَالَيْتَ فَلَكَ الحَمْدُ عَلَى مَا قَضَيْتَ أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ
+وَصَلَّى اللهُ عَلَى سَيِّدَنَا مُحَمَّدٍ النَّبِيِّ اْلاُمِّيِّ وَعَلَى آلِهِ وَصَحْبِهِ وَسَلَّمَ"
+                        android:textColor="@color/white"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/latinDoaQunut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/arabDoaQunut"
+                        android:text="Allahummah dini fi man hadait, wa ‘afini fiman ‘afait, wa tawallani fi man tawallait, wa barik li fi ma a’thait, wa qini syarra ma qadhait, fa innaka taqdhi wa la yuqdha ‘alaik, wa innahu la yazillu man wa lait, wa la ya’izzu man ‘adait, tabarakta rabbana wa ta’alait, fa lakal hamdu a’la ma qadhait, wa astagfiruka wa atubu ilaik, wa shallallahu ‘ala sayyidina muhammadin nabiyyil ummiyyi wa ‘ala alihi wa shahbihi wa sallam.ِ"
+                        android:textColor="@color/white"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDoaOrangTua"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardDoaQunut"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleDoaOrangTua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Doa untuk Kedua Orang Tua"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/arabDoaOrangTua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleDoaOrangTua"
+                        android:text="رَبِّ اغْفِرْ لِيْ وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِيْ صَغِيْرَاَ"
+                        android:textColor="@color/white"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/latinDoaOrangTua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/arabDoaOrangTua"
+                        android:text="Rabbighfir lī, wa li wālidayya, warham humā kamā rabbayānī shaghīrā."
+                        android:textColor="@color/white"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
