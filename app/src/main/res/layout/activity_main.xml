@@ -238,6 +238,47 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCatatan"
+                android:layout_width="320dp"
+                android:layout_height="74dp"
+                android:layout_below="@id/cardAyatKursi"
+                android:layout_marginBottom="14dp"
+                android:backgroundTint="#37B899"
+                android:clickable="true"
+                android:padding="14dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <TextView
+                        android:id="@+id/titleCatatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Catatan"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleCatatan"
+                        android:text="Catatan Pribadi"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/quran" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
         </RelativeLayout>
     </ScrollView>
 
