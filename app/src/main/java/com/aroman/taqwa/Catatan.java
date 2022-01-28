@@ -13,8 +13,8 @@ import android.widget.TextView;
 public class Catatan extends AppCompatActivity {
     SQLiteDatabase myDB = null;
     String TableName = "Catatan";
-    String Data = "";
-    TextView txtData;
+    String dID = "", dJudul = "", dIsi = "";
+    TextView DataID, DataJudul, DataIsi;
     Button btnEdit, btnSimpan, btnHapus;
     EditText ID, Judul, Isi;
 
@@ -23,10 +23,14 @@ public class Catatan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catatan);
 
-//        txtData = findViewById(R.id.txtdata);
+        DataID = findViewById(R.id.DataID);
+        DataJudul = findViewById(R.id.DataJudul);
+        DataIsi = findViewById(R.id.DataIsi);
+
         btnSimpan = findViewById(R.id.btnSimpan);
         btnEdit = findViewById(R.id.btnEdit);
         btnHapus = findViewById(R.id.btnHapus);
+
         ID = findViewById(R.id.ID);
         Judul = findViewById(R.id.Judul);
         Isi = findViewById(R.id.Isi);
@@ -73,7 +77,9 @@ public class Catatan extends AppCompatActivity {
 
     public void tampilData(){
         try {
-            Data = "";
+            dID = "";
+            dJudul = "";
+            dIsi = "";
             clearField();
             Cursor c = myDB.rawQuery("SELECT * FROM " + TableName, null);
             int col1 = c.getColumnIndex("ID");
@@ -86,14 +92,20 @@ public class Catatan extends AppCompatActivity {
                     String ID = c.getString(col1);
                     String Judul = c.getString(col2);
                     String Isi = c.getString(col3);
-                    Data = Data + ID + "-" + Judul + "-" + Isi + "\n";
+                    dID = dID + ID + "\n";
+                    dJudul = dJudul + Judul + "\n";
+                    dIsi = dIsi + Isi + "\n";
                 }
                 while (c.moveToNext());
             }
-            txtData.setText(Data);
+            DataID.setText(dID);
+            DataJudul.setText(dJudul);
+            DataIsi.setText(dIsi);
         }
         catch (Exception e){
-            txtData.setText(Data);
+            DataID.setText(dID);
+            DataJudul.setText(dJudul);
+            DataIsi.setText(dIsi);
         }
     }
 

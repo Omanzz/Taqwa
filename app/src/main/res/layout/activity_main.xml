@@ -273,7 +273,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_alignParentEnd="true"
-                        android:src="@drawable/quran" />
+                        android:src="@drawable/poem" />
                 </RelativeLayout>
 
             </com.google.android.material.card.MaterialCardView>
