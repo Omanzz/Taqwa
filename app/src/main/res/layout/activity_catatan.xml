@@ -67,11 +67,12 @@
         android:id="@+id/cardInputForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/svCatatan"
+        android:layout_alignParentBottom="true"
         android:backgroundTint="#37B899"
         android:clickable="false"
         android:padding="14dp"
-        app:cardElevation="8dp"
-        android:layout_below="@id/svCatatan">
+        app:cardElevation="8dp">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -91,26 +92,26 @@
                 android:id="@+id/ID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
                 android:layout_below="@id/Title"
+                android:layout_marginBottom="4dp"
                 android:hint="Berikan Nomor - (ID)"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
 
             <EditText
                 android:id="@+id/Judul"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
                 android:layout_below="@id/ID"
+                android:layout_marginBottom="4dp"
                 android:hint="Judul Catatan"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
 
             <EditText
                 android:id="@+id/Isi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
                 android:layout_below="@id/Judul"
+                android:layout_marginBottom="4dp"
                 android:hint="Isi Catatan.."
                 android:inputType="textMultiLine"
                 android:lines="2"
@@ -127,8 +128,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Edit"
-                    app:layout_constraintEnd_toStartOf="@id/btnSimpan"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnSimpan"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
