@@ -9,7 +9,7 @@ import android.view.View;
 import com.google.android.material.card.MaterialCardView;
 
 public class MainActivity extends AppCompatActivity {
-    MaterialCardView cardSholatWajib, cardBacaanSholat, cardDoa, cardDzikir, cardAyatKursi;
+    MaterialCardView cardSholatWajib, cardBacaanSholat, cardDoa, cardDzikir, cardAyatKursi, cardCatatan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         cardDoa = findViewById(R.id.cardDoa);
         cardDzikir = findViewById(R.id.cardDzikir);
         cardAyatKursi = findViewById(R.id.cardAyatKursi);
+        cardCatatan = findViewById(R.id.cardCatatan);
 
         cardSholatWajib.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +55,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, AyatKursi.class));
+            }
+        });
+
+        cardCatatan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Catatan.class));
             }
         });
 
